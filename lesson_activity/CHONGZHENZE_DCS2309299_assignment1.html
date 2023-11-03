@@ -1,0 +1,46 @@
+<html><head>
+    <title>Table</title>
+    <ling rel=icon herf=epicface22.jpg type=image/jpgc>
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
+    </head>
+    <body>
+    
+    <table align=center border=1 bordercolor=black width="60%">
+    <h3 align="center"><strong><br>My favorite fictional characters</strong></h3>
+    <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    </tr>
+</table>
+</body></html>
+
+<tbody id="My favorite fictional characters"></tbody>
+</table>
+<script>
+fetch('CHONGZHENZE_DCS2309299.xml') 
+        .then(response => response.text())
+        .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
+        const characters = xmlDoc.getElementsByTagName('character');
+        const table = document.getElementById('My favorite fictional characters');
+        for (let i = 0; i < friends.length; i++) {
+            const characters = characterss[i];
+            const name = characters.getElementsByTagName('name')[0].textContent;
+            const age = characters.getElementsByTagName('age')[0].textContent;
+            const gender = characters.getElementsByTagName('age')[0].textContent;
+            const row = table.insertRow(i);
+            const nameCell = row.insertCell(0);
+            const ageCell = row.insertCell(1);
+            const genderCell = row.insertCell(2);
+            numberCell.innerHTML = i + 1;
+            nameCell.innerHTML = name;
+            ageCell.inhnerHTML = age;
+            genderCell.innerHTML = gender;
+        }
+    })
+    .catch(error => console.error(error));
+</script>
+</body>
+</html>
