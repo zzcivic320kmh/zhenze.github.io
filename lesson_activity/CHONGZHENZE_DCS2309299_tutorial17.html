@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>JavaScript - Display text</title>
+    <link rel="icon" href="epicface22.jpg" type="image/jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(car.jpg);
+            color: grey;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            text-align: center; /* Center content */
+        }
+
+        p {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            font-size: 160%;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+
+        font {font-weight: bold}
+    </style>
+</head>
+<body>
+    <form>
+        <p style="color: #696969; font-family: verdana; font-size: 160%; text-align: center; width: 60%; height: 120%">
+            <br>Personal details:<br>
+            <table width="100%">
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type=text name=fname></td>
+                    </tr>
+                    <tr>
+                    <td>Last Name:</td> 
+                    <td><input type=text name=lname maxlength=></td>
+                    </tr>
+                    <tr>
+                    <td>Gender:</td>
+                    <td><input type = radio name = gender value = Male> Male
+                    <input type = radio name = gender value = Female> Female</td>
+                    </tr>
+                    <tr>
+                    <td>Choose your favorite subjects:</td>
+                    <td><input type = checkbox name = fav_sub value = DCS4103>DCS4103
+                    <input type = checkbox name = fav_sub value = DCS3003>DCS3003
+                    <input type = checkbox name = fav_sub value = DCS1003>DCS1003
+                    <input type = checkbox name = fav_sub value = DCS2003>DCS2003</td>
+                    </tr>
+                    <tr>
+                    <td>Address:</td>
+                    <td><textarea rows=4 cols=30 name = address></textarea></td>
+                    </tr>
+                    <tr>
+                    <td>Date of birth:</td>
+                    <td><input type = date name = dob></td>
+                    </tr>
+                    <tr>
+                    <td>Login password:</td>
+                    <td><input type = password name = loginpass></td>
+                    </tr>
+                    <tr>
+                    <td>Course:</td>
+                    <td><select>
+                        <option value="0">- List of Courses -</option>
+                
+                        <optgroup label="Diploma In Computer Science">
+                        <option value="DCS_S1">Semester 1</option>
+                        <option value="DCS_S2">Semester 1</option>
+                        <option value="DCS_S3">Semester 1</option>
+                        <option value="DCS_S4">Semester 1</option>
+                        <option value="DCS_S5">Semester 1</option>
+                        <option value="DCS_S6">Semester 1</option>
+                        
+                        <option value="DIB">Diploma In Bussiness</option>
+                        <option value="DAS">Diploma In Airline Services</options>
+                        </select></td>
+                    <br>
+            </table>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>
