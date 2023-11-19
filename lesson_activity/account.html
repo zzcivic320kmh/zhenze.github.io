@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>adibas project</title>
+    <link rel="icon" href="epicface22.jpg" type="image/jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=adibasstyle.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-image: url(car.jpg);
+            color: grey;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            text-align: center; /* Center content */
+        }
+
+        p {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            font-size: 160%;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+
+        font {font-weight: bold}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="REALADIDAS.png" width="125px" height="60px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="adibas.html">Home</a></li>
+                        <li><a href="products2.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>   
+                </nav>       
+                <img src="menu.png" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">    
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <img src="backgorund.png">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <form>
+        <p style="color: #696969; font-family: verdana; font-size: 160%; text-align: center; width: 60%; height: 120%">
+            <table width="100%">
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type=text name=fname></td>
+                    </tr>
+                    <tr>
+                    <td>Last Name:</td> 
+                    <td><input type=text name=lname maxlength=></td>
+                    </tr>
+                    <tr>
+                    <td>Gender:</td>
+                    <td><input type = radio name = gender value = Male> Male
+                    <input type = radio name = gender value = Female> Female</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <td>Address:</td>
+                    <td><textarea rows=4 cols=30 name = address></textarea></td>
+                    </tr>
+                    <tr>
+                    <td>Date of birth:</td>
+                    <td><input type = date name = dob></td>
+                    </tr>
+                    <tr>
+                    <td>Login password:</td>
+                    <td><input type = password name = loginpass></td>
+                    </tr>
+                    <tr>
+                    <br>
+            </table>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>
