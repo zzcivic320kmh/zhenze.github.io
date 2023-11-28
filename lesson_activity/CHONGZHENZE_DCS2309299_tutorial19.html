@@ -1,0 +1,117 @@
+<html><head>
+    <title>quiz 3 make</title>
+    <link rel=icon href=epicface22.jpg type=image/jpg>
+    <meta name=viewport content=width=device-width, initial-scale=1.0></head>
+    <body topmargin=50>
+    <center>
+    <form>
+        <p style="color:#696969;font-family:arial;font-size:160%;
+        text-align:center;width:60%;height:120%">
+        DCS3003 Website Design Course Survey
+        <br>
+        <br>
+        <table border=1px width="70%">
+        <tr>
+        <th font-color="#696969" u align="left">Personal Detail</th>
+        </tr>
+        <tr>
+        <td>Student ID:
+        <input type=text name=fname></td>
+        <td>Student Name:
+        <input type=text name=sname></td>
+        </tr>
+        <tr>
+        <td>Email address:
+        <input type=text name=email></td>
+        <td>IC No.:
+        <input type=text name=IC></td>
+        <tr>
+            <td><label for="Group">Course:</label>
+            <select id="Courses" onchange="updateOptions()">
+            <option value="dcs">Diploma in Computer Science</option>
+            <option value="dib">Diploma in Business</option>
+            </select>
+            
+            <select id="CourseNumber">
+            </select>
+            </td>
+        <td>D.O.B:
+        <input type = date name = dob></td>
+        </tr>
+        </table>
+        <br><br>
+        <table border="1px" width="70%">
+            <tr>
+                <th u font-color="#6969" align="left" width="70%">Questions</th>
+            </tr>
+            <tr>
+                <th font-color="#900" align="left" width="70%">Please answer all questions</th>
+            </tr>
+            <tr>
+                <td width="70%">1.Have you grasped the content of the Website Design so far?</td>
+                    <td><input type = radio name = yes value = YES> YES<br>
+                        <input type = radio name = no value = NO> NO</td>
+            </tr>
+            <tr>
+                <td width="70%">2.Can you now create a simple but interactive website?</td>
+                    <td><input type = radio name = yes value = YES> YES<br>
+                        <input type = radio name = no value = NO> NO</td>
+            </tr>
+            <tr>
+                <td width="70%"> What have you learned so far?</td>
+                <td><input type = checkbox name = Knowledge_sub value = Knowledge>Knowledge<br>
+                    <input type = checkbox name = Practicalskills_sub value = Practicalskills>Practicalskills<br>
+                    <input type = checkbox name = ProblemSolving_sub value = ProblemSolving>ProblemSolving<br>
+                    <input type = checkbox name = Self-Explorationskills_sub value = Self-Explorationskills>Self-Explorationskills</td>
+            </tr>
+            <tr>
+                <td colspan="2" width="70%">Wish items/ suggestions *<br><br>
+                <textarea rows=3 cols=120 name = wishitmes></textarea></td>
+            </tr>
+        </table>
+        <br>
+        <input type = Reset value = Reset>
+        <input type = Submit value = Submit>
+        </form>
+    </center>
+    <script>
+        function updateOptions() {
+        var selectedCourse = document.getElementById("Courses").value;
+        
+        var courseNumberDropdown = document.getElementById("CourseNumber");
+        
+        courseNumberDropdown.innerHTML = '';
+        
+        switch (selectedCourse) {
+        case "dcs":
+        addOption(courseNumberDropdown, "dcssem1", "DCS-Sem1");
+        addOption(courseNumberDropdown, "dcssem2", "DCS-Sem2");
+        addOption(courseNumberDropdown, "dcssem3", "DCS-Sem3");
+        addOption(courseNumberDropdown, "dcssem4", "DCS-Sem4");
+        addOption(courseNumberDropdown, "dcssem5", "DCS-Sem5");
+        addOption(courseNumberDropdown, "dcssem6", "DCS-Sem6");
+        break;
+        case "dib":
+        addOption(courseNumberDropdown, "dibsem1", "DIB-Sem1");
+        addOption(courseNumberDropdown, "dibsem2", "DIB-Sem2");
+        addOption(courseNumberDropdown, "dibsem3", "DIB-Sem3");
+        addOption(courseNumberDropdown, "dibsem4", "DIB-Sem4");
+        addOption(courseNumberDropdown, "dibsem5", "DIB-Sem5");
+        addOption(courseNumberDropdown, "dibsem6", "DIB-Sem6");
+        break;
+        default:
+        break;
+        }
+        }
+        
+        function addOption(selectElement, value, text) {
+        var option = document.createElement("option");
+        option.value = value;
+        option.text = text;
+        selectElement.add(option);
+        }
+        </script>        
+</body>
+</html>
+            
+            
