@@ -39,7 +39,7 @@ let timetemp;
 let bounced = false;			// to check if shapes have bounced
 
 function setup() {
-	createCanvas(800, 600);
+	createCanvas(1280, 720);
 	rectMode(CENTER);
 	angleMode(DEGREES);
 	styleSwap(1);				// sets initial style
